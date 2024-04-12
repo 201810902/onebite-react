@@ -1,16 +1,15 @@
 import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Button from "./components/Button";
+import { useState } from "react";
+import Bulb from "./components/Bulb";
+import Counter from "./components/Counter";
+
+
 function App() {
+  
   return (
     <>
-      <Header />
-      <h1>안녕 리액트!</h1>
-      <Main />
-      <Button/>
-      <Button/>
-      <Button/>
+      <Bulb />
+      <Counter />
     </>
   );
 }
