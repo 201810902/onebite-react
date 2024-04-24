@@ -1,4 +1,10 @@
-import { useState, useRef, useReducer, useCallback } from "react";
+import {
+  useState,
+  useRef,
+  useReducer,
+  useCallback,
+  createContext,
+} from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Editor from "./components/Editor";
@@ -38,7 +44,7 @@ function reducer(state, action) {
       return state;
   }
 }
-
+const TodoContext = createContext();
 function App() {
   const [todos, dispatch] = useReducer(reducer, mockData);
   const idRef = useRef(3);
@@ -72,7 +78,7 @@ function App() {
     });
   };
 
-  const func = useCallback(()=> {},[])
+  const func = useCallback(() => {}, []);
   return (
     <div className="App">
       <Header />
